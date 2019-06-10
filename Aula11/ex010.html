@@ -1,0 +1,42 @@
+<html lang="pt-BR">
+
+<head>
+
+<title> Detran </title>
+
+</head>
+
+
+
+<body>
+<h1> Sistema de Velocidade</h1>
+
+Velocidade do Carro: <input type="number" id="txtvel"> Km/h
+<input type="button" value="Verificar" onclick="calcular()">
+<div id="res">  
+
+
+</div>
+
+
+<script>
+ function calcular(){
+     var txtV = window.document.querySelector('input#txtvel');
+     var resu = window.document.querySelector('div#res');
+     var valor = Number(txtV.value);
+    
+     resu.innerHTML = `A Sua velocidade é <strong> ${valor} Km/h </strong>`;
+     if(valor >= 60)
+     {
+         resu.innerHTML += `<p> Você esta acima do Limite de Velocidade </p>`;
+     }
+     else{
+         resu.innerHTML += `<p> Use o Sinto de Segurança! </p>`;
+     }
+     resu.innerHTML += `<p>Dirija com cuidado! </p>`;
+ }
+
+</script>
+</body>
+
+</html>
